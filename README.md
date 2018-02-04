@@ -1,39 +1,74 @@
-# react_test
+# URL-Converter
 
-Electron+Reactなサンプルアプリ
-
-詳細はQiitaにの記載したので参照下さい.
-
-[Electron+ReactなサンプルアプリをES6で作成する](http://qiita.com/kegamin/items/e08923d46bb9df9cf283)
+ちょっと特殊な使い方用のためのアプリ
+どちらかというとRiot.jsの勉強のための一作
 
 ## アプリの機能
 
-HelloWorld的な機能のみです.
-
-* Reactを使った画面表示
-* ボタンクリックを認識して、コンソールログにクリックカウントを出力
-* デバッグ用にデベロッパーツールを表示
-* babel-registerによるjsxの自動変換
-* ESLintによる検証
-
-何故か動かない！という時に便利なデベロッパーツールを表示させたり、クリック制御ってどうやるの？的な事を知りたかったので入れています
-
-## やらなかった点
-
-最終的には以下も試したいが、レポジトリが複雑になると参考にしずらいので今回はやっていません
-
-* bowerを利用したフロントエンドの管理(bootstrapとか)
-* reduxを使ったMV*的な作り込み
-* react-route等のReactの色々な機能
-* gulpを利用した自動化
+特定の文字列に対して変換することができる。
+残念ながら一組に対して一つしか現状対応できていない。
 
 ## 使い方
 
+`converter-data.json` に書かれたものがそのまま表示される。
+必要最低限な書き方は下記のようなかんじ
+```
+{
+	"hogehoge" : {
+		"title" : "hogehoge",
+		"convertURL" : "hoge.com:8083",
+		"targetText" : "localhost:8080"
+	},
+	"localhost" : {
+		"title" : "localhost",
+		"convertURL" : "localhost:8080",
+		"targetText" : "hoge.com:8083"
+	}
+}
+
+```
+
+
+## How to set up 
+
+# electron-quick-start
+
+**Clone and run for a quick way to see Electron in action.**
+
+This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation.
+
+**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
+
+A basic Electron application needs just these files:
+
+- `package.json` - Points to the app's main file and lists its details and dependencies.
+- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
+- `index.html` - A web page to render. This is the app's **renderer process**.
+
+You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start).
+
+## To Use
+
+To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
 ```bash
-cd repository_dir
-clone https://github.com/kegamin/electron_test.git electron_test
-cd electron_test
+# Clone this repository
+git clone https://github.com/electron/electron-quick-start
+# Go into the repository
+cd electron-quick-start
+# Install dependencies
 npm install
+# Run the app
 npm start
 ```
 
+Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+
+## Resources for Learning Electron
+
+- [electron.atom.io/docs](http://electron.atom.io/docs) - all of Electron's documentation
+- [electron.atom.io/community/#boilerplates](http://electron.atom.io/community/#boilerplates) - sample starter apps created by the community
+- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
+- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
+- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
+- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
