@@ -1,0 +1,34 @@
+{
+  "name": "url_converter-riot",
+  "author": "kegamin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maroon8021/URL-Converter-by-Riot.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . electron_test --platform darwin --arch x64"
+  },
+  "dependencies": {
+    "app": "^0.1.0",
+    "babel-register": "^6.26.0",
+    "electron": "^1.7.11",
+    "fs": "0.0.1-security",
+    "jsonfile": "^4.0.0",
+    "npm-install-missing": "^0.1.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.36.8",
+    "eslint": "^2.2.0",
+    "eslint-config-eslint": "^3.0.0",
+    "eslint-plugin-node": "^1.0.0",
+    "eslint-plugin-react": "^4.0.0"
+  },
+  "description": "Electron+Reactなサンプルアプリ"
+}
