@@ -1,14 +1,14 @@
 {
-	"iwantu" : {
-		"title" : "iwantu",
+	"hogehoge" : {
+		"title" : "hogehoge",
 		"order" : 1 ,
-		"convertURL" : "iwantu.internal.worksap.com:8083",
+		"convertURL" : "hogehoge:8083",
 		"targetText" : "localhost:8080"
 	},
 	"localhost" : {
 		"title" : "localhost",
 		"order" : 2 ,
 		"convertURL" : "localhost:8080",
-		"targetText" : "iwantu.internal.worksap.com:8083"
+		"targetText" : "hogehoge:8083"
 	}
 }
